@@ -1,38 +1,336 @@
-.App {
-  text-align: center;
-}
+ .main-container {
+   height: 100vh;
+   background: linear-gradient(to right, #4f7cff, #b845ff, #ff5db1);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   align-items: center;
+   font-family: Arial, sans-serif;
+ }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+ .title {
+   color: white;
+   font-size: 40px;
+   margin-bottom: 5px;
+ }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+ .subtitle {
+   color: white;
+   font-size: 16px;
+   margin-bottom: 30px;
+ }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+ .login-card {
+   width: 380px;
+   background-color: white;
+   padding: 30px;
+   border-radius: 15px;
+   text-align: center;
+   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+ }
 
-.App-link {
-  color: #61dafb;
-}
+ .login-card h2 {
+   margin-bottom: 20px;
+ }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ .login-card label {
+   display: block;
+   text-align: left;
+   margin-top: 15px;
+   font-size: 14px;
+   color: #333;
+ }
+
+ .login-card input {
+   width: 100%;
+   padding: 12px;
+   margin-top: 5px;
+   border-radius: 8px;
+   border: 1px solid #ddd;
+   outline: none;
+ }
+
+ .login-btn {
+   width: 100%;
+   padding: 12px;
+   margin-top: 25px;
+   border: none;
+   border-radius: 10px;
+   background: linear-gradient(to right, #4f7cff, #b845ff);
+   color: white;
+   font-size: 16px;
+   cursor: pointer;
+ }
+
+ .login-btn:hover {
+   opacity: 0.9;
+ }
+
+ .credentials {
+   margin-top: 15px;
+   font-size: 13px;
+   color: gray;
+ }
+
+ .footer {
+   margin-top: 30px;
+   font-size: 13px;
+   color: white;
+ }
+
+ .sell-btn {
+   padding: 10px 20px;
+   border: none;
+   background: red;
+   color: white;
+   border-radius: 8px;
+   cursor: pointer;
+   font-weight: bold;
+ }
+
+ .sell-btn:hover {
+   background: darkred;
+ }
+
+
+
+
+ /*  home page css*/
+
+ .navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 15px 40px;
+   background: white;
+   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+ }
+
+ .logo {
+   color: #2a65ea;
+ }
+
+ .search-box {
+   display: flex;
+   width: 50%;
+ }
+
+ .search-box input {
+   flex: 1;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 6px 0 0 6px;
+ }
+
+ .search-box button {
+   padding: 10px 15px;
+   border: none;
+   background: #2a65ea;
+   color: white;
+   border-radius: 0 6px 6px 0;
+   cursor: pointer;
+ }
+
+ .sell-btn {
+   padding: 10px 20px;
+   border: none;
+   background: orange;
+   color: white;
+   border-radius: 6px;
+   cursor: pointer;
+ }
+
+ .banner {
+   margin: 20px auto;
+   width: 90%;
+   padding: 100px 20px;
+   border-radius: 15px;
+   background-image: url('./assets/olx.png');
+   /* banner image */
+   background-size: cover;
+   background-position: center;
+   color: white;
+   text-align: center;
+   position: relative;
+   overflow: hidden;
+ }
+
+ .banner::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.4);
+   border-radius: 15px;
+   z-index: 0;
+ }
+
+ .banner h1,
+ .banner p {
+   position: relative;
+   color: white;
+   z-index: 1;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+ }
+
+ .products {
+   width: 90%;
+   margin: auto;
+ }
+
+ .grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+   gap: 20px;
+ }
+
+ .card {
+   background: white;
+   padding: 10px;
+   border-radius: 12px;
+   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+ }
+
+ .card img {
+   width: 100%;
+   border-radius: 12px;
+ }
+
+ .price {
+   font-weight: bold;
+   color: green;
+ }
+
+ .location {
+   color: gray;
+ }
+
+
+
+
+
+
+ /* detail page  */
+
+
+ .card-link {
+   text-decoration: none;
+   color: inherit;
+ }
+
+ .detail-page {
+   width: 80%;
+   margin: 30px auto;
+   background: white;
+   padding: 30px;
+   border-radius: 15px;
+   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+   text-align: center;
+ }
+
+ .detail-img {
+   width: 400px;
+   max-width: 100%;
+   border-radius: 15px;
+   margin: 20px 0;
+ }
+
+ .desc {
+   font-size: 18px;
+   color: #333;
+   margin-top: 15px;
+ }
+
+
+ /* Remove Link underline */
+ .card-link {
+   text-decoration: none;
+   color: inherit;
+ }
+
+ /* Card Design */
+ .card {
+   background: white;
+   border-radius: 15px;
+   overflow: hidden;
+   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12);
+   transition: 0.3s ease;
+ }
+
+ .card:hover {
+   transform: translateY(-6px);
+   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+ }
+
+ .card img {
+   width: 100%;
+   height: 180px;
+   object-fit: cover;
+ }
+
+ .card-body {
+   padding: 15px;
+ }
+
+ .card-body h3 {
+   font-size: 18px;
+   margin-bottom: 8px;
+ }
+
+ /* Detail Page */
+ .detail-page {
+   width: 70%;
+   margin: 40px auto;
+   background: white;
+   padding: 30px;
+   border-radius: 18px;
+   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+   text-align: center;
+ }
+
+ .detail-img {
+   width: 420px;
+   max-width: 100%;
+   border-radius: 15px;
+   margin: 20px 0;
+ }
+
+ .buy-btn {
+   margin-top: 25px;
+   padding: 12px 30px;
+   background: #2a65ea;
+   color: white;
+   border: none;
+   font-size: 18px;
+   border-radius: 10px;
+   cursor: pointer;
+ }
+
+ .buy-btn:hover {
+   background: #1746b3;
+ }
+
+ /* Buy Page */
+ .buy-page {
+   width: 60%;
+   margin: 80px auto;
+   text-align: center;
+   background: white;
+   padding: 40px;
+   border-radius: 18px;
+   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+ }
+
+ .home-btn {
+   margin-top: 20px;
+   padding: 10px 25px;
+   background: orange;
+   border: none;
+   color: white;
+   font-size: 16px;
+   border-radius: 10px;
+   cursor: pointer;
+ }
